@@ -1,42 +1,45 @@
+// Update with your config settings.
+
 module.exports = {
-    development: {
-      client: "sqlite3",
-      connection: {
-        filename: "./data/got.db3",
-      },
-      useNullAsDefault: true, // only needed for SQLite
+
+  development: {
+    client: 'sqlite3',
+    connection: {
+      filename: './data/cars.db3'
     },
-  
-    staging: {
-      client: "postgresql",
-      connection: {
-        database: "my_db",
-        user: "username",
-        password: "password",
-      },
-      pool: {
-        min: 2,
-        max: 10,
-      },
-      migrations: {
-        tableName: "knex_migrations",
-      },
+    useNullasDefault: true
+  },
+
+  staging: {
+    client: 'postgresql',
+    connection: {
+      database: 'my_db',
+      user:     'username',
+      password: 'password'
     },
-  
-    production: {
-      client: "postgresql",
-      connection: {
-        database: "my_db",
-        user: "username",
-        password: "password",
-      },
-      pool: {
-        min: 2,
-        max: 10,
-      },
-      migrations: {
-        tableName: "knex_migrations",
-      },
+    pool: {
+      min: 2,
+      max: 10
     },
-  };
-  
+    migrations: {
+      tableName: 'knex_migrations'
+    }
+  },
+
+  production: {
+    client: 'postgresql',
+    connection: {
+      database: 'my_db',
+      user:     'username',
+      password: 'password'
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      tableName: 'knex_migrations'
+    }
+  }
+
+};
