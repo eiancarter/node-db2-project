@@ -18,6 +18,7 @@ exports.up = function(knex) {
   
       // booleans are normally stores as 1 for true and 0 for false
       tbl.boolean("title_status").defaultTo(false);
+      tbl.boolean("transmission_type").defaultTo(false);
 
     });
   };
